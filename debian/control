@@ -1,15 +1,35 @@
-Source: template-repository
-Section: unknown
+Source: golang-github-apparentlymart-go-cidr
+Section: devel
 Priority: optional
-Maintainer: Tsic404 <liuheng@deepin.org>
-Build-Depends: debhelper (>= 11)
-Standards-Version: 4.1.3
-Homepage: https://github.com/deepin-community/template-repository
-#Vcs-Browser: https://salsa.debian.org/debian/deepin-community-template-repository
-#Vcs-Git: https://salsa.debian.org/debian/deepin-community-template-repository.git
+Maintainer: Debian Go Packaging Team <team+pkg-go@tracker.debian.org>
+Uploaders: Thorsten Alteholz <debian@alteholz.de>
+Build-Depends: debhelper-compat (= 13),
+               dh-golang,
+               golang-any
+Standards-Version: 4.5.1
+Homepage: https://github.com/apparentlymart/go-cidr
+Vcs-Browser: https://salsa.debian.org/go-team/packages/golang-github-apparentlymart-go-cidr
+Vcs-Git: https://salsa.debian.org/go-team/packages/golang-github-apparentlymart-go-cidr.git
+XS-Go-Import-Path: github.com/apparentlymart/go-cidr
+Testsuite: autopkgtest-pkg-go
 
-Package: template-repository
-Architecture: any
-Depends: ${shlibs:Depends}, ${misc:Depends}
-Description: <insert up to 60 chars description>
- <insert long description, indented with spaces>
+Package: golang-github-apparentlymart-go-cidr-dev
+Architecture: all
+Depends: ${misc:Depends}
+Multi-Arch: foreign
+Description: manipulations of CIDR netmasks and their associated addresses
+ This Go package is a collection of assorted utilities for computing network
+ and host addresses within network ranges.
+ .
+ It expects a CIDR-type address structure where addresses are divided into
+ some number of prefix bits representing the network and then the remaining
+ suffix bits represent the host.
+ .
+ For example, it can help to calculate addresses for sub-networks of a parent
+ network, or to calculate host addresses within a particular prefix.
+ .
+ At present this package is prioritizing simplicity of implementation and
+ de-prioritizing speed and memory usage. Thus caution is advised before using
+ this package in performance-critical applications or hot codepaths.
+ Patches to improve the speed and memory usage may be accepted as long as they
+ do not result in a significant increase in code complexity.

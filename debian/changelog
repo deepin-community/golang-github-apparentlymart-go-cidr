@@ -1,5 +1,45 @@
-template-repository (1.0-1) unstable; urgency=medium
+golang-github-apparentlymart-go-cidr (1.1.0-2) unstable; urgency=medium
 
-  * Initial release
+  [ Debian Janitor ]
+  * Remove constraints unnecessary since buster:
+    + Build-Depends: Drop versioned constraint on debhelper.
+  * Bump debhelper dependency to >= 11, since that's what is used in
+    debian/compat.
+  * Bump debhelper from old 11 to 13.
+  * Set debhelper-compat version in Build-Depends.
+  * Set upstream metadata fields: Bug-Database, Bug-Submit, Repository,
+    Repository-Browse.
+  * Update standards version to 4.5.1, no changes needed.
 
- -- Tsic404 <liuheng@deepin.org>  Sat, 28 Jan 2023 13:46:49 +0800
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Tue, 29 Nov 2022 18:39:16 +0000
+
+golang-github-apparentlymart-go-cidr (1.1.0-1) unstable; urgency=low
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints.
+    + golang-github-apparentlymart-go-cidr-dev: Add Multi-Arch: foreign.
+
+  [ Thorsten Alteholz ]
+  * New upstream release
+  * reverse dependencies successfully built with ratt:
+    - packer
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Fri, 20 Nov 2020 15:35:14 +0100
+
+golang-github-apparentlymart-go-cidr (1.0.1-1) unstable; urgency=medium
+
+  * New upstream release
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 08 Dec 2019 21:23:41 +0000
+
+golang-github-apparentlymart-go-cidr (1.0.0+git20180915.1755c02-2) unstable; urgency=medium
+
+  * upload source package
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 14 Jul 2019 18:01:43 +0000
+
+golang-github-apparentlymart-go-cidr (1.0.0+git20180915.1755c02-1) unstable; urgency=medium
+
+  * Initial release (Closes: #820907)
+
+ -- Thorsten Alteholz <debian@alteholz.de>  Sun, 14 Apr 2019 20:01:43 +0000
